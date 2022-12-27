@@ -24,3 +24,6 @@ class MarkdownPreviewer extends React.Component{
         )
     }
 }
+
+let Doc = document.getElementById("root")
+ReactDOM.render(<MarkdownPreviewer />, Doc )
