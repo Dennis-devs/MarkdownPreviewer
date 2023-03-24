@@ -1,7 +1,12 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import MarkdownPreviewer from "./App";
 
 
-let Doc = document.getElementById("root")
-ReactDOM.render(<App />, Doc)
+const root = createRoot(document.getElementById("root"))
+root.render(
+    <StrictMode>
+        <MarkdownPreviewer />
+    </StrictMode>
+)

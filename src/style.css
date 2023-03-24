@@ -1,0 +1,10 @@
+#editor{
+    height: 350px;
+    width: 500px;
+    border: 2px solid black;
+}
+#preview{
+    height: 800px;
+    width: 500px;
+    border: 2px solid blue;
+}
