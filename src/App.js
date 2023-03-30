@@ -7,12 +7,13 @@ const printPreview = `INSTRUCTIONS
 <p>This preview is made with<p> 
 
 ![React Logo w/ Text](https://bit.ly/3K123RQ)
-# h1
-## h2
+# Heading
+## Sub-heading
 > help[help text here](URL//.com)
 
 [freeCodeCamp](https://www.freecodecamp.com)
 \`<p>code</p>\`
+
 \`\`\`
 Multi line code:
 function func(arg) {  
@@ -20,7 +21,7 @@ function func(arg) {
 }
 \`\`\`
 - And of course there are lists.
-  - Some are bulleted.
+  - Some are bulleted. \n
      - With different indentation levels.
         - That look like this.
 1. And there are numbered lists too.
@@ -32,7 +33,7 @@ function func(arg) {
 > Block Quotes
 <style>
 p{
-    color: gold
+    color: purple
 }
 <stlyle/>
 `;
@@ -48,9 +49,9 @@ const MarkdownPreviewer = () => {
  return (
     
     
-    <div id="outer" className="d-flex flex-column align-items-center bg-info min-vh-100">
+    <div id="outer" className="d-flex flex-column align-items-center bg-warning-subtle min-vh-100">
      <div id="top">
-    <nav className="navbar navbar-light bg-warning d-flex align-content-center mt-4" style={{width: 500, height:35}}>
+    <nav className="navbar navbar-light bg-warning d-flex align-content-center mt-4 px-2" style={{width: 500, height:35}}>
         
         <span className="navbar-brand h1">
             <img src="https://design-style-guide.freecodecamp.org/downloads/fcc_primary_small.svg" alt="" style={{width:26, height:20}}/>
@@ -59,14 +60,14 @@ const MarkdownPreviewer = () => {
         </span>
         <i className="fa fa-maximize icon1"></i>
     </nav>   
-    <textarea id="editor"
+    <textarea id="editor" className=""
     onChange={(e) => setState(e.target.value)}
     value={state} style={{position:"relative"}}>
     </textarea>
     </div>
     <br />
     <div id="bottom">
-    <nav className="navbar navbar-light bg-warning d-flex align-content-center" style={{width: 500, height:35}}>
+    <nav className="navbar navbar-light bg-warning d-flex align-content-center px-2" style={{width: 500, height:35}}>
         <span className="navbar-brand mb-0 h1">
             <img src="https://design-style-guide.freecodecamp.org/downloads/fcc_primary_small.svg" alt="" style={{width:26, height:20}}/>
             {" "}
@@ -74,7 +75,7 @@ const MarkdownPreviewer = () => {
         </span>
         <i className="fa fa-maximize icon2"></i>
     </nav>
-    <div id="preview" 
+    <div id="preview" className="ps-3"
     dangerouslySetInnerHTML={{__html: marked(state)}}>
     </div>
     </div>
