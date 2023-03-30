@@ -1,7 +1,13 @@
-#editor{
+textarea{
     height: 350px;
     width: 500px;
     border: 2px solid black;
+}
+.editor2{
+    height: 650px;
+}
+.icon1{
+    
 }
 #preview{
     height: 800px;

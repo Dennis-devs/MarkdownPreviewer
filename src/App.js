@@ -2,6 +2,7 @@ import React, { useState} from "react";
 import { marked } from "marked";
 import './style.css'
 
+
 const printPreview = `INSTRUCTIONS
 <p>This preview is made with<p> 
 
@@ -46,16 +47,39 @@ const MarkdownPreviewer = () => {
 
  return (
     
-    <>
+    
+    <div id="outer" className="d-flex flex-column align-items-center bg-info min-vh-100">
+     <div id="top">
+    <nav className="navbar navbar-light bg-warning d-flex align-content-center mt-4" style={{width: 500, height:35}}>
+        
+        <span className="navbar-brand h1">
+            <img src="https://design-style-guide.freecodecamp.org/downloads/fcc_primary_small.svg" alt="" style={{width:26, height:20}}/>
+            {" "}
+            Editor
+        </span>
+        <i className="fa fa-maximize icon1"></i>
+    </nav>   
     <textarea id="editor"
     onChange={(e) => setState(e.target.value)}
-    value={state}>
+    value={state} style={{position:"relative"}}>
     </textarea>
-
+    </div>
+    <br />
+    <div id="bottom">
+    <nav className="navbar navbar-light bg-warning d-flex align-content-center" style={{width: 500, height:35}}>
+        <span className="navbar-brand mb-0 h1">
+            <img src="https://design-style-guide.freecodecamp.org/downloads/fcc_primary_small.svg" alt="" style={{width:26, height:20}}/>
+            {" "}
+            Previewer
+        </span>
+        <i className="fa fa-maximize icon2"></i>
+    </nav>
     <div id="preview" 
     dangerouslySetInnerHTML={{__html: marked(state)}}>
     </div>
-    </>
+    </div>
+    </div>
+    
  )
 }
 
