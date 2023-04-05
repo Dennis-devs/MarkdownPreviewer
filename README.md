@@ -1,0 +1,3 @@
+--> This  is a  Markdown Previewer.
+--> Enter GitHub flavored markdown into the Editor and watch the text get rendered as HTML in the Previewer.
+--> Expand to full view using the maximize buttons.
